@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url(../fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body {
+    font-family: "Hanken Grotesk";
+    
+    margin: 0;
+    background-color: hsl(221, 100%, 96%);
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card {
+    margin: 0
+}
+
+.card a {
+    text-decoration: none;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 5vh;
+    margin: 4vh 0;
+}
+
+.card a:hover {
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+
+.card-result {
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+
+    color: white;
+    text-align: center;
+    padding: 1vh 2vw;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    box-shadow: -20px 20px 100px 1px grey;
+}
+
+.card-result h2 {
+    color: hsl(241, 100%, 89%);
+}
+
+.card-result p:last-of-type {
+    color: hsl(241, 100%, 89%);
+}
+
+.circle {
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 14vw;
+}
+
+.circle h3 {
+    font-size: 100px;
+    margin: 0;
+}
+
+.card-detail {
+    background-color: white;
+    padding: 1vh 2vw 1vh 6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    left: -3vw;
+    z-index: 0;
+    box-shadow: 0 0 100px grey;
+}
+
+.note {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 1vw;
+    gap: 45%;
+}
+
+
+.note-reaction {
+    background-color: hsla(0, 100%, 67%, 10%);
+}
+
+.note-reaction h3 {
+    color: hsl(0, 100%, 67%);
+}
+
+.note-memory {
+    background-color: hsla(39, 100%, 56%, 10%);
+}
+
+.note-memory h3 {
+    color: hsl(39, 100%, 56%);
+}
+
+.note-verbal {
+    background-color: hsla(166, 100%, 37%, 10%);
+}
+
+.note-verbal h3 {
+    color: hsl(166, 100%, 37%);
+}
+
+.note-visual {
+    background-color: hsla(234, 85%, 45%, 10%);
+}
+
+.note-visual h3 {
+    color: hsl(234, 85%, 45%);
+}
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        max-width: 60vh;
+
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .card-result {
+        box-shadow: none;
+    }
+
+    .card-detail {
+        left: 0;
+        padding: 6vh 2vw 1vh 2vw;
+        top: -5vh;
+        border-top-right-radius: inherit;
+        border-bottom-left-radius: 20px;
+    }
+
+    .note {
+        margin: 0 2vw 0 0;
+        padding: 0  0 0 4vw;
+    }
+}
